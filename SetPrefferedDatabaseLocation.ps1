@@ -1,11 +1,11 @@
 $username = " "
 $password = " "
 $Cred = New-Object -TypeName System.Management.Automation.PSCredential -argumentlist $userName, $(convertto-securestring $Password -asplaintext -force)
-$TenantSiteUrl ="https://jpqanissangroup-admin.sharepoint.com"
+$TenantSiteUrl ="https://sitename-admin.sharepoint.com"
 Import-Module "C:\FJ_O365_Operation\MSOnline\1.1.166.0\MSOnline.psd1"
 
 #Connect-SPOService -Url $TenantSiteUrl -credential $Cred 
-#$SiteURL = "https://jpqanissangroupnam.sharepoint.com/teams/newsitecreatedPS"
+#$SiteURL = "https://sitename.sharepoint.com/teams/newsitecreatedPS"
  
 #New-SPOSite -Url $SiteURL -Owner $username -StorageQuota 2000 -Title "newsitecreatedPS" -Template "STS#3" -LocaleID 1033 -NoWait 
 #Get-SPOSite -Identity $SiteURL

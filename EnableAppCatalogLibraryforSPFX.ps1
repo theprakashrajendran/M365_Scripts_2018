@@ -1,5 +1,5 @@
 #Variables for processing
-$AdminCenterURL = "https://nissangroup-admin.sharepoint.com"
+$AdminCenterURL = "https://sitename-admin.sharepoint.com"
  
 #User Name Password to connect
 $AdminUserName = ""
@@ -11,6 +11,6 @@ $Credential = new-object -typename System.Management.Automation.PSCredential -ar
   
 #Connect to SharePoint Online
 Connect-SPOService -url $AdminCenterURL  -credential $Credential
-$siteURL = "https://nissangroup.sharepoint.com/teams/JAO_NML_07_004076_Contract_repository"
+$siteURL = "https://sitename.sharepoint.com/teams/JAO_NML_Contract_repository"
 $site = Get-SPOSite $siteURL
 Add-SPOSiteCollectionAppCatalog -Site $site 

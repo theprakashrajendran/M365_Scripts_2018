@@ -2,7 +2,7 @@ param ([string]$SiteURL, [string]$StartDate, [string]$EndDate, [string]$TodayDat
 #[System.Net.WebRequest]::DefaultWebProxy.Credentials = [System.Net.CredentialCache]::DefaultCredentials
 #Import-Module "C:\Users\scs01054\AppData\Local\Apps\SharePointPnPPowerShellOnline\Modules\SharePointPnPPowerShellOnline\SharePointPnP.PowerShell.Online.Commands.dll" 
 Try {
-$RequestSiteURL = "https://nissangroup.sharepoint.com/sites/Request_site"
+$RequestSiteURL = "https://sitename.sharepoint.com/sites/Request_site"
 $sPassword = ConvertTo-SecureString $password -AsPlainText -Force
 $Credential = New-Object System.Management.Automation.PSCredential ($UserName, $sPassword)
 #$Credential = New-Object typeName "System.Management.Automation.PSCredential" argumentList $username, $password
@@ -74,8 +74,4 @@ Catch {
 
 }
 
-
-
-# .\SearchAuditLog.ps1 "https://jpqanissangroup.sharepoint.com/sites/Request_site/" "2019/10/01"  "2020/02/02" "20200221"
-
-#.\SearchAuditLog.ps1 "https://jpqanissangroup.sharepoint.com/teams/JAO_NS_000021_SitePolicyTestingforMSTicket" "2020/02/01"  "2020/02/22" "20200222"
+ 
